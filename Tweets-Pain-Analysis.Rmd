@@ -1,0 +1,32 @@
+---
+title: "Tweets Pain Analysis Project"
+output:
+  html_document:
+    theme: cosmo
+---
+
+# Pain Analysis Project
+
+## Load Necessary Packages
+
+```{r load-packages, include=TRUE}
+library(fastR)
+library(tidyverse)
+library(magrittr)
+library(lattice)
+library(mosaic)
+library(Hmisc)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(broom)
+library(tidytext)
+library(janeaustenr)
+library(stringr)
+library(Hmisc)
+library(fs)
+library(textdata)
+library(topicmodels)
+library(wordcloud)
+library(tm)
+library(reshape2)
