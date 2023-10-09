@@ -55,7 +55,7 @@ Pain_df_tidy
 Pain_df_tidy_Nostopwords= Pain_df_tidy %>% anti_join((stop_words))
 Pain_df_tidy_Nostopwords
 
-#8 create a bar chart to find words whose frequencies are more than 50. 
+# Creating a bar chart to find words whose frequencies are more than 50. 
 
 Pain_df_tidy_Nostopwords %>%
   count(word, sort= TRUE) %>%
@@ -66,8 +66,8 @@ Pain_df_tidy_Nostopwords %>%
   xlab(NULL) + 
   coord_flip() 
 
-#9 Create two bar charts to show the frequency of top 10 positive and negative words tweets. 
-# The label for Y axis is “Sentiment” and the label for X axis is “Terms”.
+# Creating two bar charts to show the frequency of top 10 positive and negative words tweets. 
+  # The label for Y axis is “Sentiment” and the label for X axis is “Terms”.
 
 bing_word_counts = Pain_df_tidy_Nostopwords %>%
   inner_join(get_sentiments("bing"))%>%
@@ -86,7 +86,7 @@ bing_word_counts %>%
   labs(y="Sentiment", x="Terms")+
   coord_flip()
 
-# 10 Create word cloud for 100 positive and negative words tweets
+# Word cloud for 100 positive and negative words tweets
 
 Pain_df_tidy_Nostopwords %>%
   anti_join(stop_words) %>%
